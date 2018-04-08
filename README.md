@@ -1,6 +1,6 @@
 # bulbapedia-pokedex-webscraper
 Code for blog post about Python web scraping with BeautifulSoup and SQLite databases
-You can find the blog post here: http://luca-wel.com.
+You can find the blog post here: http://luca-wel.com. (!!! not online yet, will be published very soon !!!)
 
 ### About
 This script will go through pages of [Bulbapedia](https://bulbapedia.bulbagarden.net/wiki/Main_Page)
