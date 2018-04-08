@@ -13,38 +13,38 @@ and automatically write the following pieces of information for all Pokémon int
 ### Setup
 You need to have Python 3 installed on your machine.
 Furthermore, install these libraries using pip:
-'''
+```
 pip install requests bs4 html5lib
-'''
+```
 
 To create the database on your own run these commands:
-'''
+```
 python create-pokedex.py
 python manual-insertions.py
-'''
+```
 Alternatively, use the already filled one from this repo.
 
 ### Usage
 Example: Get the Sp.Atk base value of all _Deoxys_ forms:
-'''sqlite
+```
 SELECT form_name, spatk FROM pokemon WHERE base_name = "Deoxys"
-'''
+```
 
 Example: Find the pokemon with highest Def value.
-'''sqlite
+```
 SELECT base_name, form_name, MAX(atk) FROM pokemon
-'''
+```
 
 Example: Find all _Fire_ type pokemon.
-'''sqlite
+```
 SELECT base_name, form_name FROM pokemon
 JOIN pokemon_type_rel
 ON pokemon.id = pokemon_type_rel.pokemon_id
 WHERE pokemon_type_rel.type = "Fire"
-'''
+```
 
 Example: Find all _Dragon_/_Flying_ type pokemon.
-'''sqlite
+```
 SELECT base_name, form_name FROM pokemon
 JOIN pokemon_type_rel
 ON pokemon.id = pokemon_type_rel.pokemon_id
@@ -56,4 +56,4 @@ SELECT base_name, form_name FROM pokemon
 JOIN pokemon_type_rel
 ON pokemon.id = pokemon_type_rel.pokemon_id
 WHERE pokemon_type_rel.type = "Flying"
-'''
+```
